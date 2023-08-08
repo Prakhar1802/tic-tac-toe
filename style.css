@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Baloo 2', cursive;
+}
+
+.header{
+    background: #353333;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+.header ul{
+    padding: 12px 6px;
+}
+.header ul li{
+    list-style-type: none;
+}
+.header  ul li a{
+    color: #fff;
+    font-size: 25px;
+}
+
+.game-container{
+    /* background: #7b197b; */
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.game-container .container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    position: relative;
+}
+
+.game-container .container .box{
+    border: 2px solid #000;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-container .container .box:hover{
+    background: #baafaf;
+    cursor: pointer;
+}
+
+.game-container .container .br-0{
+    border-right: 0;
+}
+.game-container .container .bl-0{
+    border-left: 0;
+}
+.game-container .container .bt-0{
+    border-top: 0;
+}
+.game-container .container .bb-0{
+    border-bottom: 0;
+}
+.game-container .game-info{
+    margin-left: 30px;
+}
+.game-container .game-info h1{
+    font-size: 50px;
+}
+
+.game-container .game-info .imgbox  img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.game-container .game-info div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-container .game-info span{
+    font-size: 30px;
+    text-align: center;
+}
+.game-container .game-info button{
+    font-size: 20px;
+    padding: 6px 50px;
+    cursor: pointer;
+    background: #072141;
+    color: #fff;
+    border-radius: 12px;
+}
+.game-container .game-info button:hover{
+    background:#fff;
+    color: #072141;
+}
+.game-container .container .line{
+    width: 0;
+    height: 10px;
+    border-radius: 12px;
+    background: #7b2fb1;
+    position: absolute;
+    transform: translate(13vw, 15vw) rotate(90deg);
+    transition: width 1s ease-in-out;
+}
+
+
+/* media query */
+@media only screen and (max-width:900px){
+    .game-container{
+        flex-wrap: wrap;
+    }
+    .game-info{
+        margin-top: 34px;
+    }
+    .game-info h1{
+        font-size: 1rem
+    }
+    
+.game-container .container{
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vw);
+}
+}
